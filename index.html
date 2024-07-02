@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arushi's Portfolio</title>
+    <link rel="stylesheet" href="sty.css">
+    <script src="https://kit.fontawesome.com/c0886ed494.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Arushi</span></h1>
+            <p>Graphic Designer and Web Developer</p>
+        </div>
+    </div>
+</div>
+<!-----------about------------> 
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/chuubs.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, this is me Arushi. I'm a 3rd year student, at IIT GUWAHATI pursuing in Civil Engineering, 
+                though im studying civil im have keen interest in designing and after making few designs i want to further pursue in 
+                graphic designing and developing.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('eductaion')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Graphic Designing</span><br>Designing visuals, logo, animation</li>
+                        <li><span>Web Development</span><br>Developing websites</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="eductaion">
+                    <ul>
+                        <li><span>2022</span><br>Qualified JEE Advance</li>
+                        <li><span>2022-current</span><br>Btech at IIT GUWAHATI.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----services-------->>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+            </div>
+            <div>
+                <i class="fa-regular fa-object-group"></i>
+                <h2>Graphic Design</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!------projects--------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/ui design-1.png">
+                <div class="layer">
+                    <h3>UI Design</h3>
+                    <p>Its a basic UI design in a Ecommerce website</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work1.jpg">
+                <div class="layer">
+                    <h3>Motion Graphic</h3>
+                    <p>This is the geometry node graphic design</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/w3.jpg">
+                <div class="layer">
+                    <h3>Animation</h3>
+                    <p>Its a animation of a planet</p>
+                    <a href="https://www.kapwing.com/videos/66828d27e70e5d71b2672d2b"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="btn">See More</a>
+    </div>
+</div>
+<!----------contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>devarushi011@gmail.com</p>
+                <p>6376647551</p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right"></div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-links");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>   
+<script>
+    var sidemenu = doc.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+</body>
+</html>
